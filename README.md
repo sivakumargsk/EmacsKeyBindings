@@ -18,6 +18,36 @@
 |`C-z    ` | suspend emacs|
 |`C-X C-c` | close down emacs|
 
+#### Window-Commands
+
+| Key Binding  | Description |
+| -------------|-------------|
+|`C-x 2` | split window vertically |
+|`C-x o` | change to other window |
+|`C-x 0` | delete window |
+|`C-x 1` | close all windows except the one the cursors in |
+|`C-x ^` | enlarge window |
+|`M-x` | shrink-window command says it ;-) |
+|`M C-v` | scroll other window |
+|`C-x 4 f` | find file in other window |
+|`C-x 4 o` | change to other window |
+|`C-x 4 0` | kill buffer and window |
+|`C-x 5 2` | make new frame |
+|`C-x 5 f` | find file in other frame |
+|`C-x 5 o` | change to other frame |
+|`C-x 5 0` | close this frame |
+
+
+#### Important
+
+| Key Binding | Description|
+|-------------|------------|
+|`C-g` | quit the running/entered command |
+|`C-x u` | undo previous action |
+|`M-x revert-buffer RETURN` | (insert like this) undo all changes since last save |
+|`M-x recover-file RETURN` | Recover text from an autosave-file |
+|`M-x recover-session RETURN`| if you edited several files |
+
 #### Basic movement
 
 | Key Binding   | Description   |
@@ -34,6 +64,12 @@
 |`M-v` | scroll down one page|
 |`M-<` | beginning of text|
 |`M->` | end of text|
+|      | ** Works For Pervez sir's init.el file **|
+|`C-s-up` | Buffer move up |
+|`C-s-down' | Buffer move down |
+|`C-s-left` | Buffer move left |
+|`C-s-right' | Buffer move right |
+
 
 #### Editing
 
@@ -59,32 +95,17 @@
 |`M-c` |  simply make first letter in word uppercase |
 |`M-l` |  opposite to M-u |
 
-#### Important
+#### Multiple Cursors
 
 | Key Binding | Description|
 |-------------|------------|
-|`C-g` | quit the running/entered command |
-|`C-x u` | undo previous action |
-|`M-x revert-buffer RETURN` | (insert like this) undo all changes since last save |
-|`M-x recover-file RETURN` | Recover text from an autosave-file |
-|`M-x recover-session RETURN`| if you edited several files |
-
-#### Online-Help
-
-| Key Binding   | Description   |
-| ------------- |------------|
-|`C-h c` | which command does this keystroke invoke |
-|`C-h k` | which command does this keystroke invoke and what does it do? |
-|`C-h l` | what were my last 100 typed keys |
-|`C-h w` | what key-combo does this command have? |
-|`C-h f` | what does this function do |
-|`C-h v` | what's this variable and what is it's value |
-|`C-h b` | show all keycommands for this buffer |
-|`C-h t` | start the emacs tutorial |
-|`C-h i` | start the info reader |
-|`C-h C-k` | start up info reader and go to a certain key-combo point |
-|`C-h F` | show the emacs FAQ |
-|`C-h p` | show infos about the Elisp package on this machine |
+|`C-<`  | mark previous like this|
+|`C->`  | mark next like this|
+|`C-c C-<` | mark all like this|
+|`C-c c r` | set rectangular region anchor|
+|`C-c c c` | edit lines|
+|`C-c c e` | edit ends of lines|
+|`C-c c a` | edit beginnings of lines|
 
 #### Search/Replace
 
@@ -117,24 +138,23 @@
 |`C-r` | repeat backwards |
 |`M-x` | query-replace-regexp search and replace |
 
-#### Window-Commands
 
-| Key Binding  | Description |
-| -------------|-------------|
-|`C-x 2` | split window vertically |
-|`C-x o` | change to other window |
-|`C-x 0` | delete window |
-|`C-x 1` | close all windows except the one the cursors in |
-|`C-x ^` | enlarge window |
-|`M-x` | shrink-window command says it ;-) |
-|`M C-v` | scroll other window |
-|`C-x 4 f` | find file in other window |
-|`C-x 4 o` | change to other window |
-|`C-x 4 0` | kill buffer and window |
-|`C-x 5 2` | make new frame |
-|`C-x 5 f` | find file in other frame |
-|`C-x 5 o` | change to other frame |
-|`C-x 5 0` | close this frame |
+
+#### Version Control
+
+| Key Binding | Description |
+|-------------|-------------|
+|`C-x v d` | show all registered files in this dir |
+|`C-x v =` | show diff between versions |
+|`C-x v u` | remove all changes since last checkin |
+|`C-x v ~` | show certain version in different window |
+|`C-x v l` | print log |
+|`C-x v i` | mark file for version control add |
+|`C-x v h` | insert version control header into file |
+|`C-x v r` | check out named snapshot |
+|`C-x v s` | create named snapshot |
+|`C-x v a` | create changelog file in gnu-style |
+
 
 #### Bookmark commands
 
@@ -161,25 +181,6 @@
 |`C-c C-z` | suspend job (`C-z` under unix) |
 |`M-p` | show previous commands |
 
-#### DIRectory EDitor (dired)
-
-| Key Binding | Description |
-|-------------|-------------|
-|`C-x d` | start up dired |
-|        |`C` (large C) copy <br>`d` mark for erase <br>`D` delete right away <br>`e` or `f` open file or directory <br>`g` reread directory structure from file <br>`G` change group permissions (chgrp) <br>`k` delete line from listing on screen (don't actually delete) <br>`m` mark with \* <br>`n` move to next line <br>`o` open file in other window and go there <br>`C-o` open file in other window but don't change there <br>`P` print file <br>`q` quit dired <br>`Q` do query-replace in marked files <br>`R` rename file <br>`u` remove mark <br>`v` view file content <br>`x` delete files marked with D <br>`z` compress file <br>`M-Del` remove all marks (whatever kind) <br>`~` mark backup files (name~ files) for deletion <br>`#` mark auto-save files (#name#) for deletion <br>`*/` mark directory with \* (C-u \* removes that mark again) <br>`=` compare this file with marked file <br>`M-=` compare this file with it's backup file <br>`!` apply shell command to this file <br>`M-}` change to the next file marked with \* od D <br>`M-{` change to the previous file marked with \* od D <br>`% d` mark files described through regular expression for deletion <br>`% m` mark files described through regular expression for deletion (with \*) <br>`+` create directory <br>`>` changed to next dir <br>`<` change to previous dir <br>`s` toggle between sorting by name or date|
-
-#### Telnet
-| Key Binding | Description |
-|-------------|-------------|
-|`M-x` | telnet starts up telnet-modus |
-|`C-d` | either delete char or send EOF |
-|`C-c C-c` | stop running job (similar to C-c under unix) |
-|`C-c C-d` | send EOF |
-|`C-c C-o` | clear output of last command |
-|`C-c C-z` | suspend execution of command |
-|`C-c C-u` | kill line backwards |
-|`M-p` | recall previous command |
-
 #### Text
 > Works only in text mode
 
@@ -203,20 +204,25 @@
 |`M-x macroname` | execute macroname |
 
 
-#### Version Control
+#### DIRectory EDitor (dired)
 
 | Key Binding | Description |
 |-------------|-------------|
-|`C-x v d` | show all registered files in this dir |
-|`C-x v =` | show diff between versions |
-|`C-x v u` | remove all changes since last checkin |
-|`C-x v ~` | show certain version in different window |
-|`C-x v l` | print log |
-|`C-x v i` | mark file for version control add |
-|`C-x v h` | insert version control header into file |
-|`C-x v r` | check out named snapshot |
-|`C-x v s` | create named snapshot |
-|`C-x v a` | create changelog file in gnu-style |
+|`C-x d` | start up dired |
+|        |`C` (large C) copy <br>`d` mark for erase <br>`D` delete right away <br>`e` or `f` open file or directory <br>`g` reread directory structure from file <br>`G` change group permissions (chgrp) <br>`k` delete line from listing on screen (don't actually delete) <br>`m` mark with \* <br>`n` move to next line <br>`o` open file in other window and go there <br>`C-o` open file in other window but don't change there <br>`P` print file <br>`q` quit dired <br>`Q` do query-replace in marked files <br>`R` rename file <br>`u` remove mark <br>`v` view file content <br>`x` delete files marked with D <br>`z` compress file <br>`M-Del` remove all marks (whatever kind) <br>`~` mark backup files (name~ files) for deletion <br>`#` mark auto-save files (#name#) for deletion <br>`*/` mark directory with \* (C-u \* removes that mark again) <br>`=` compare this file with marked file <br>`M-=` compare this file with it's backup file <br>`!` apply shell command to this file <br>`M-}` change to the next file marked with \* od D <br>`M-{` change to the previous file marked with \* od D <br>`% d` mark files described through regular expression for deletion <br>`% m` mark files described through regular expression for deletion (with \*) <br>`+` create directory <br>`>` changed to next dir <br>`<` change to previous dir <br>`s` toggle between sorting by name or date|
+
+#### Telnet
+| Key Binding | Description |
+|-------------|-------------|
+|`M-x` | telnet starts up telnet-modus |
+|`C-d` | either delete char or send EOF |
+|`C-c C-c` | stop running job (similar to C-c under unix) |
+|`C-c C-d` | send EOF |
+|`C-c C-o` | clear output of last command |
+|`C-c C-z` | suspend execution of command |
+|`C-c C-u` | kill line backwards |
+|`M-p` | recall previous command |
+
 
 
 #### Programming
@@ -251,3 +257,20 @@
 | Key Binding | Description |
 |-------------|-------------|
 |`M-x gdb` | starts up gdm in an extra window|
+
+#### Online-Help
+
+| Key Binding   | Description   |
+| ------------- |------------|
+|`C-h c` | which command does this keystroke invoke |
+|`C-h k` | which command does this keystroke invoke and what does it do? |
+|`C-h l` | what were my last 100 typed keys |
+|`C-h w` | what key-combo does this command have? |
+|`C-h f` | what does this function do |
+|`C-h v` | what's this variable and what is it's value |
+|`C-h b` | show all keycommands for this buffer |
+|`C-h t` | start the emacs tutorial |
+|`C-h i` | start the info reader |
+|`C-h C-k` | start up info reader and go to a certain key-combo point |
+|`C-h F` | show the emacs FAQ |
+|`C-h p` | show infos about the Elisp package on this machine |
