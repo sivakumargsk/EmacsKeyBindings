@@ -66,9 +66,9 @@
 |`M->` | end of text|
 |      | ** Works For Pervez sir's emacs configaration **|
 |`C-s-up` | Buffer move up |
-|`C-s-down' | Buffer move down |
+|`C-s-down` | Buffer move down |
 |`C-s-left` | Buffer move left |
-|`C-s-right' | Buffer move right |
+|`C-s-right` | Buffer move right |
 
 
 #### Editing
